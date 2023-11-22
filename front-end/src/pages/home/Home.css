@@ -25,6 +25,7 @@
   .image.active {
     opacity: 1; 
     transform: scale(1.05);
+    animation: slowZoom 55s ease-in-out infinite;
   }
   
   .landing-slide {

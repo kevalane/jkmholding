@@ -136,7 +136,7 @@ const Home: React.FC = (): JSX.Element => {
                         ))}
                     </div>}
                 </div>
-                {currentImageIndex !== images.length && <div className="animated-arrow" onClick={() => nextPage()}>
+                {currentImageIndex === 0 && <div className="animated-arrow" onClick={() => nextPage()}>
                     ↓
                 </div>}
             </div>

@@ -160,3 +160,12 @@ form {
   transform: translateY(.5rem);
 }
 }
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
