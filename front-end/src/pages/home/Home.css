@@ -92,6 +92,43 @@
   .contact-button:hover {
     top: 49.7%;
   }
+
+.landing-info {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 900px;
+  font-size: 2rem;
+}
+
+.landing-info img {
+  opacity: .7;
+}
+
+@media screen and (max-width: 1200px) {
+  .landing-info {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .landing-info {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .landing-info {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .landing-info {
+    font-size: .9rem;
+  }
+}
   
   @keyframes bounce {
     0%, 100% {

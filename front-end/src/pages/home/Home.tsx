@@ -112,14 +112,15 @@ const Home: React.FC = (): JSX.Element => {
                         <img 
                             key={index} 
                             src={url} 
-                            alt={`Rose black and white landing cover ${index}`} 
+                            alt={`JKM Holding black and white landing cover ${index}`} 
                             className={`image ${index === currentImageIndex ? 'active' : ''}`} 
                         />
                     ))}
                     {currentImageIndex === 0 && (
-                        <button className="contact-button btn btn-default box-3d" onClick={() => navigate('/contact')}>
-                            Get in Touch
-                        </button>
+                        <div className="landing-info fade-in">
+                            <img src="/img/logo/jkm_holding_colored.svg" height="75"/>
+                            <h1>We start and invest in the companies of tomorrow.</h1>
+                        </div>
                     )}
                     {currentImageIndex === images.length && <div className={`landing-slide ${currentImageIndex === images.length ? 'active' : ''}`}>
                         <Landing />
