@@ -1,0 +1,108 @@
+.home-wrap {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: absolute; 
+  }
+  
+  .image {
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+    position: absolute; 
+    opacity: 0; 
+    transition: opacity 1s ease, transform 1s ease; 
+    z-index: -1;
+  }
+  
+  .image.active {
+    opacity: 1; 
+    transform: scale(1.05);
+  }
+  
+  .landing-slide {
+    height: 100vh;
+    width: 100vw;
+    opacity: 0; 
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .landing-slide.active {
+    opacity: 1;
+  }
+  
+  .progress-bar {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10; 
+  }
+  
+  .progress-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .progress-dot.active {
+    background-color: rgb(225, 5, 20) !important;
+  }
+  
+  .animated-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-size: 3rem;
+    z-index: 10;
+    animation: bounce 1s infinite;
+    color: #fff;
+    text-shadow: 
+          -1px -1px 1px rgb(225, 5, 20),  
+           1px -1px 1px rgb(225, 5, 20),
+          -1px 1px 1px rgb(225, 5, 20),
+           1px 1px 1px rgb(225, 5, 20);
+  }
+  
+  .contact-button {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    z-index: 5; 
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .contact-button:hover {
+    top: 49.7%;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+  }

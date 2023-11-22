@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+body {
+  background: rgb(252, 250, 248) !important;
+}
+
+p, a, h1, h5, h2 {
+  color: rgb(225, 5, 20) !important;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+  font-weight: 600;
+  color: rgb(220, 53, 69) !important;
+}
+
+.title {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.box-3d {
+  box-shadow: 
+    0px 1px 2px rgba(0,0,0,0.03), 
+    0px 2px 4px rgba(0,0,0,0.03), 
+    0px 4px 8px rgba(0,0,0,0.03), 
+    0px 8px 16px rgba(0,0,0,0.03),
+    0px 16px 32px rgba(0,0,0,0.03),
+    0px 32px 64px rgba(0,0,0,0.03) !important;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: .7rem;
+  color: rgb(225, 5, 20) !important;
+  margin-top: 1rem;
+}
+
+input, textarea {
+  font-size: 1rem !important;
+  padding: 10px 20px !important;
+}
+
+form {
+  width: 100%;
+}
+
+.dual-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.capitalize {
+  text-transform: capitalize !important;
+}
+
+.btn-default {
+  border: 2px solid rgb(225, 5, 20) !important;
+  background-color: rgba(225, 5, 20, 0.6) !important;
+  font-weight: 600 !important;
+  padding: 10px 20px !important;
+  color: #fff !important;
+  transition: all 0.1s ease !important;
+}
+
+.btn-default:hover {
+  background-color: rgba(225, 5, 20, 0.8) !important;
+}
+
+.invalid-feedback {
+  font-weight: 600;
+}
+
+/* ANIMATIONS */
+.fly-left {
+  animation: flyInFromLeft .5s ease-in-out;
+}
+
+.fly-right {
+  animation: flyInFromRight .5s ease-in-out;
+}
+
+.fly-bottom {
+  animation: flyInFromBotton .5s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn .5s ease-in-out;
+}
+
+/* ANIMS */
+@keyframes flyInFromRight {
+  from {
+      transform: translateX(20%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes flyInFromLeft {
+  from {
+      transform: translateX(-20%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes flyInFromBotton {
+  from {
+      transform: translateY(10%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes moveUpDown {
+0%, 100% {
+  transform: translateY(-.5rem);
+}
+50% {
+  transform: translateY(.5rem);
+}
+}
