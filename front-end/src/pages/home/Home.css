@@ -53,13 +53,13 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: #333;
     margin-bottom: 5px;
     transition: background-color 0.3s;
   }
   
   .progress-dot.active {
-    background-color: rgb(225, 5, 20) !important;
+    background-color: #fff !important;
   }
   
   .animated-arrow {
@@ -72,11 +72,6 @@
     z-index: 10;
     animation: bounce 1s infinite;
     color: #fff;
-    text-shadow: 
-          -1px -1px 1px rgb(225, 5, 20),  
-           1px -1px 1px rgb(225, 5, 20),
-          -1px 1px 1px rgb(225, 5, 20),
-           1px 1px 1px rgb(225, 5, 20);
   }
   
   .contact-button {
