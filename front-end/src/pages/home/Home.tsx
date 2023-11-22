@@ -7,9 +7,7 @@ import { Helmet } from 'react-helmet';
 const Home: React.FC = (): JSX.Element => {
     const images: string[] = [
         '/img/landing/1.png', 
-        '/img/landing/2.jpg', 
-        '/img/landing/3.jpg', 
-        '/img/landing/4.jpg'
+        '/img/landing/2.png',
     ];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isScrolling, setIsScrolling] = useState(false);
@@ -47,7 +45,7 @@ const Home: React.FC = (): JSX.Element => {
             const deltaY = touchStartY.current - touchEndY.current;
 
             if (deltaY > 20) { // Swiping Up
-                setCurrentImageIndex(prevIndex => Math.min(prevIndex + 1, images.length));
+                setCurrentImageIndex(prevIndex => Math.min(prevIndex + 1, images.length-1));
             } else if (deltaY < -20) { // Swiping Down
                 setCurrentImageIndex(prevIndex => Math.max(prevIndex - 1, 0));
             }
@@ -65,7 +63,7 @@ const Home: React.FC = (): JSX.Element => {
             if (e.deltaY < 0) {
                 setCurrentImageIndex(prevIndex => Math.max(prevIndex - 1, 0));
             } else if (e.deltaY > 0) {
-                setCurrentImageIndex(prevIndex => Math.min(prevIndex + 1, images.length));
+                setCurrentImageIndex(prevIndex => Math.min(prevIndex + 1, images.length -1));
             }
 
             setTimeout(() => {
@@ -118,12 +116,18 @@ const Home: React.FC = (): JSX.Element => {
                     ))}
                     {currentImageIndex === 0 && (
                         <div className="landing-info fade-in">
-                            <img src="/img/logo/jkm_holding_colored.svg" height="75"/>
+                            <img src="/img/logo/jkm_holding_colored.svg" height="75" alt="JKM Holding logo in white"/>
+                            <h1>We start and invest in the companies of tomorrow.</h1>
+                        </div>
+                    )}
+                    {currentImageIndex === 1 && (
+                        <div className="landing-info fade-in">
+                            <img src="/img/logo/jkm_solutions_color.svg" height="75" alt="JKM Solutions logo in white"/>
                             <h1>We start and invest in the companies of tomorrow.</h1>
                         </div>
                     )}
                     {currentImageIndex === images.length && <div className={`landing-slide ${currentImageIndex === images.length ? 'active' : ''}`}>
-                        <Landing />
+                        {/* <Landing /> */}
                     </div>}
                     {/* Progress Bar */}
                     {currentImageIndex !== images.length &&<div className="progress-bar">
