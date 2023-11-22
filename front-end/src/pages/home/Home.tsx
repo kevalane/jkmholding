@@ -96,15 +96,15 @@ const Home: React.FC = (): JSX.Element => {
     return (
         <>
             <Helmet>
-                <title>Home | Rose</title>
-                <meta name="description" content="Welcome to Rose Club, an exquisite high-end nightclub with a decadent atmosphere. Discover our VIP tables, events, and vibrant happenings." />
-                <meta property="og:title" content="Home | Rose Club" />
-                <meta property="og:description" content="Welcome to Rose Club, an exquisite high-end nightclub with a decadent atmosphere. Discover our VIP tables, events, and vibrant happenings." />
-                <meta property="og:url" content="https://roseclub.se" />
-                <meta name="twitter:title" content="Home | Rose Club" />
-                <meta name="twitter:description" content="Welcome to Rose Club, an exquisite high-end nightclub with a decadent atmosphere. Discover our VIP tables, events, and vibrant happenings." />
-                <meta name="twitter:url" content="https://roseclub.se" />
-                <link rel="canonical" href="https://roseclub.se" />
+                <title>JKM Holding</title>
+                <meta name="description" content="We start &amp; invest in the companies of tomorrow." />
+                <meta property="og:title" content="JKM Holding" />
+                <meta property="og:description" content="We start &amp; invest in the companies of tomorrow." />
+                <meta property="og:url" content="https://jkmholding.com" />
+                <meta name="twitter:title" content="JKM Holding" />
+                <meta name="twitter:description" content="We start &amp; invest in the companies of tomorrow." />
+                <meta name="twitter:url" content="https://jkmholding.com" />
+                <link rel="canonical" href="https://jkmholding.com" />
             </Helmet>
             <div className="home-wrap">
                 <div className="image-container">
