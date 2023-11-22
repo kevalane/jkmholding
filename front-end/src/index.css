@@ -92,6 +92,8 @@ form {
 
 .btn-default:hover {
   background-color: rgba(225, 5, 20, 0.8) !important;
+  text-decoration: none !important;
+  transform: translateY(-.2rem);
 }
 
 .invalid-feedback {

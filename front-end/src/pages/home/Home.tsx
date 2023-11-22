@@ -123,7 +123,9 @@ const Home: React.FC = (): JSX.Element => {
                     {currentImageIndex === 1 && (
                         <div className="landing-info fade-in">
                             <img src="/img/logo/jkm_solutions_color.svg" height="75" alt="JKM Solutions logo in white"/>
-                            <h1>We start and invest in the companies of tomorrow.</h1>
+                            <h2>Web development, accounting & corporate structuring for entrepreneurs.</h2>
+                            <a  href="https://jkm.solutions" target="_BLANK" 
+                                rel="noreferrer" className="btn btn-default mt-3">Visit website</a>
                         </div>
                     )}
                     {currentImageIndex === images.length && <div className={`landing-slide ${currentImageIndex === images.length ? 'active' : ''}`}>
