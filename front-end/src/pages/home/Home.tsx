@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './Home.css';
-import { Landing } from './landing/Landing';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 

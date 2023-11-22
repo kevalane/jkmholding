@@ -1,0 +1,34 @@
+name: Deploy to S3 and Invalidate CloudFront Cache
+
+on:
+  push:
+    branches:
+      - main  # Set your default branch here
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+    - name: Build react app
+      run: |
+        cd front-end
+        npm install
+        npm run build
+
+    - name: Deploy to S3
+      run: |
+        aws s3 sync ./front-end/build s3://jkmholding.com --delete
+
+    - name: Invalidate CloudFront Distribution Cache
+      run: |
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
